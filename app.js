@@ -1,12 +1,45 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
     
-    const heading = React.createElement("div",{id:"parent"},[React.createElement("div",{id:"child1"},[
-        React.createElement("h1",{},"i am child1 h1"),
-        React.createElement("h2",{},"i am child1 h2"),
-    ]),
-    React.createElement("div",{id:"child"},[
-        React.createElement("h1",{},"i am child1 h1"),
-        React.createElement("h2",{},"i am child1 h2"),
-    ])]);
+
+
+
+const Header = () =>{
+    return (
+        <div className="header"  >
+        <div className="logo-container">
+            
+        </div>
+        <div className="nav-items">
+            <ul>
+           <li>Home</li>
+           <li>About Us</li>
+           <li>Contact Us</li>
+           <li>Cart</li>
+
+
+            </ul>
+            <img src="1855.jpg"/>
+
+        </div>
+
+        </div>
+    );
+};
+const AppLayout = () =>{
+    return (
+        <div className="app">
+           <Header/>
+     </div>
+    );
+};
+
+
+
+
+
+
+
     const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(heading);
+    root.render(<AppLayout/>);
     
